@@ -29,6 +29,19 @@ namespace kostky
             new kostka(),
             new kostka(),
         };
+
+        private void ZobrazKostky()
+        {
+            kostka0.Content = kostky[0].Hodnota;
+            kostka1.Content = kostky[1].Hodnota;
+            kostka2.Content = kostky[2].Hodnota;
+            kostka3.Content = kostky[3].Hodnota;
+            kostka4.Content = kostky[4].Hodnota;
+            kostka5.Content = kostky[5].Hodnota;
+        }
+
+
+          
             
 
 
@@ -36,6 +49,16 @@ namespace kostky
         public MainWindow()
         {
             InitializeComponent();
+            ZobrazKostky();
+        }
+
+        private void HodKostky_Click(object sender, RoutedEventArgs e)
+        {
+            foreach(var kostka in kostky)
+            {
+                kostka.Hod();
+            }
+            ZobrazKostky();
         }
     }
 }
