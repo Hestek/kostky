@@ -60,5 +60,30 @@ namespace kostky
             }
             ZobrazKostky();
         }
+
+        private int SpocitejBody()
+        {
+            int body = 0;
+            Dictionary<int, int> pocty = new Dictionary<int, int>();
+            pocty.Add(1, 0);
+            pocty.Add(2, 0);
+            pocty.Add(3, 0);
+            pocty.Add(4, 0);
+            pocty.Add(5, 0);
+            pocty.Add(6, 0);
+
+            foreach (var kostka in kostky)
+            {
+                if (kostka.Hodnota == 1)
+                {
+                    pocty[kostka.Hodnota]++;
+                }
+                
+                
+            }
+            return body;
+        }
+
+
     }
 }
