@@ -33,6 +33,8 @@
             <ColumnDefinition Width="10*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
+        <Image Grid.Column="1" Grid.Row="4" Source="Resources\dice-1.png"></Image>
+        <Rectangle Name="k1" Grid.Column="1" Grid.Row="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"></Rectangle>
         <Label Name="kostka0"
                Content="0"
                BorderThickness="1" 
