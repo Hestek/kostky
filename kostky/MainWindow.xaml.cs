@@ -39,12 +39,6 @@ namespace kostky
             ZobrazKostku(k4, kostky[3].Hodnota);
             ZobrazKostku(k5, kostky[4].Hodnota);
             ZobrazKostku(k6, kostky[5].Hodnota);
-            kostka0.Content = kostky[0].Hodnota;
-            kostka1.Content = kostky[1].Hodnota;
-            kostka2.Content = kostky[2].Hodnota;
-            kostka3.Content = kostky[3].Hodnota;
-            kostka4.Content = kostky[4].Hodnota;
-            kostka5.Content = kostky[5].Hodnota;
         }
 
 
