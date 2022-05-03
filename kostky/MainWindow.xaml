@@ -35,6 +35,11 @@
         </Grid.ColumnDefinitions>
         <Image Grid.Column="1" Grid.Row="4" Source="Resources\dice-1.png"></Image>
         <Rectangle Name="k1" Grid.Column="1" Grid.Row="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"></Rectangle>
+        <Rectangle Name="k2" Grid.Column="3" Grid.Row="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"></Rectangle>
+        <Rectangle Name="k3" Grid.Column="5" Grid.Row="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"></Rectangle>
+        <Rectangle Name="k4" Grid.Column="7" Grid.Row="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"></Rectangle>
+        <Rectangle Name="k5" Grid.Column="9" Grid.Row="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"></Rectangle>
+        <Rectangle Name="k6" Grid.Column="11" Grid.Row="4" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"></Rectangle>
         <Label Name="kostka0"
                Content="0"
                BorderThickness="1" 

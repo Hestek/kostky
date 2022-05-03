@@ -34,6 +34,11 @@ namespace kostky
         private void ZobrazKostky()
         {
             ZobrazKostku(k1, kostky[0].Hodnota);
+            ZobrazKostku(k2, kostky[1].Hodnota);
+            ZobrazKostku(k3, kostky[2].Hodnota);
+            ZobrazKostku(k4, kostky[3].Hodnota);
+            ZobrazKostku(k5, kostky[4].Hodnota);
+            ZobrazKostku(k6, kostky[5].Hodnota);
             kostka0.Content = kostky[0].Hodnota;
             kostka1.Content = kostky[1].Hodnota;
             kostka2.Content = kostky[2].Hodnota;
