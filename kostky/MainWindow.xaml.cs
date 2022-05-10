@@ -53,7 +53,7 @@ namespace kostky
         private ImageSource GetImage(byte[] resource)
         {
             MemoryStream memoryStream = new MemoryStream(resource);
-            BitmapFrame bitmapFrame  = BitmapFrame.Create(memoryStream);
+            BitmapFrame bitmapFrame = BitmapFrame.Create(memoryStream);
             Image image = new Image();
             image.Source = bitmapFrame;
             return image.Source;
@@ -90,12 +90,13 @@ namespace kostky
 
         private void HodKostky_Click(object sender, RoutedEventArgs e)
         {
-            foreach(var kostka in kostky)
+            foreach (var kostka in kostky)
             {
                 kostka.Hod();
             }
             ZobrazKostky();
             SpocitejBody();
+            lblBody.Content = $"Body: {SpocitejBody()}";
         }
 
         private int SpocitejBody()
@@ -111,7 +112,7 @@ namespace kostky
 
             foreach (var kostka in kostky)
             {
-                    pocty[kostka.Hodnota]++;
+                pocty[kostka.Hodnota]++;
             }
             if (pocty.ContainsValue(6))
             {
@@ -137,16 +138,52 @@ namespace kostky
                 {
                     body = kostka * 400;
                     body += 100 + pocty[1];
-                    if (kostka != 5)
+                    body += 50 + pocty[5];
+
+                }
+            }
+            else if (pocty.ContainsValue(4))
+            {
+                var kostka = pocty.First(hodnota => hodnota.Value == 5).Key;
+                if (kostka == 1)
+                {
+                    body = 2000;
+                    body += 50 + pocty[5];
+                }
+                else
+                {
+                    body = kostka * 200;
+                    body += 100 + pocty[1];
+                    body += 50 + pocty[5];
+
+                }
+
+                
+            }
+            else if (pocty.ContainsValue(3))
+            {
+                var kostka = pocty.First(hodnota => hodnota.Value == 5).Key;
+                if (kostka == 1)
+                {
+                    body = 1000;
+                    
+                }
+                else
+                {
+                    body = kostka * 100;
+                }
+                int PocetTrojic = 0;
+                foreach(var pocet in pocty)
+                {
+                    if(pocet.Value == 3)
                     {
-                        body += 50+ pocty[5];
+                        PocetTrojic++;
                     }
                 }
+
             }
 
             return body;
         }
-
-
     }
 }
